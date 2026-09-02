@@ -22,3 +22,155 @@ html, body, #content {
     grid-column: 2 / 4;
     grid-row: 1 / 4;
 }
+
+#project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#add-project-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Style de la boîte modale */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 24px;
+    width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style de l'arrière-plan flouté/sombre derrière la modale */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form input, form select, form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+#close-modal-btn {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#submit-task-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.task-area {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-card {
+    background-color: white;
+    border-left: 5px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task-left-side { display: flex; align-items: center; gap: 15px; }
+.task-card.completed { opacity: 0.5; }
+.task-card.completed h3, .task-card.completed p { text-decoration: line-through; }
+
+
+.task-project-tag {
+    background-color: #e0e0e0;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.delete-task-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-btn, .project-btn {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.filter-btn:hover, .project-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.filter-btn.active, .project-btn.active {
+    background-color: white;
+    color: red; 
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#time-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+}
